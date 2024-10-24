@@ -1,0 +1,47 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;  /* Asegura que el padding y el border se incluyan en el tamaño total del elemento */
+}
+
+body {
+    background-color: rgb(255, 142, 3);  /* Fondo naranja del cuerpo del documento */
+}
+
+.fondoGame {
+    background-image: url('../imagenes/fondo.jpg');  /* Imagen de fondo del área del juego */
+    display: flex;
+    background-position: center;
+    background-size: cover;  /* La imagen cubre todo el contenedor */
+    background-repeat: no-repeat;  /* Evita que la imagen se repita */
+    width: 100%;  /* Ancho total del contenedor */
+    height: 80vh;  /* Altura de 80% de la ventana */
+    position: relative;  /* Contenedor relativo para que el fantasma se posicione en su interior */
+}
+
+.fantasma {
+    position: absolute;  /* Posicionamiento absoluto para mover libremente el fantasma */
+    height: 70px;  /* Altura del personaje */
+    width: 70px;   /* Anchura del personaje */
+    top: 100px;  /* Posición inicial desde el borde superior */
+    left: 100px;  /* Posición inicial desde el borde izquierdo */
+    transition: transform 0.1s ease;  /* Transición suave de 0.1s para los cambios de posición */
+}
+
+/* Estilos del título */
+.silent-hill-text {
+    font-family: 'Rubik Moonrocks', cursive;  /* Fuente personalizada */
+    color: #ccc;  /* Color gris pálido */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  /* Sombra para darle profundidad */
+    font-size: 48px;  /* Tamaño de fuente grande */
+    letter-spacing: 1px;  /* Espaciado leve entre letras */
+    text-transform: uppercase;  /* Mayúsculas para un efecto más impactante */
+    filter: blur(0.5px);  /* Efecto sutil de distorsión */
+    transition: all 0.3s ease;  /* Transición suave para el efecto hover */
+}
+
+.silent-hill-text:hover {
+    color: #f2f2f2;  /* Cambia a blanco fantasmal en hover */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);  /* Sombra más marcada en hover */
+    filter: blur(1px);  /* Mayor distorsión en hover */
+    transform: scale(1.05) rotate(-2deg);  /* Leve rotación y agrandamiento en hover */
+}
